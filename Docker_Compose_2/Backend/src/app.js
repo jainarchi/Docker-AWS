@@ -1,6 +1,10 @@
 import express from 'express';
 
 const app = express()
+app.use(express.static('public'))
+
+
+
 
 
 app.get('/api/greet', (req, res) => {
@@ -18,5 +22,15 @@ app.get('/api/users' , (req , res) =>{
 })
 
 
+app.get('*name' , (req , res) => {
+ res.sendFile('public/index.html' , {root : __dirname})
+})
+
+
 
 export default app;
+
+
+
+// docker built . -t fullstack:latest
+// docker run -p 5000:5000 fullstack:latest
