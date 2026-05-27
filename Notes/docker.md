@@ -67,7 +67,7 @@ here docker compose come
 - docker compose up  (run in docker compose file dir)
 - Read Docker Compose doc 
 - bind mount -> live connection link between local source code and container
-./Backend:/app -> ./Backend mapp to /app in container 
+  ./Backend:/app -> ./Backend mapp to /app in container 
 
 
 #### if bind Mount ON 
